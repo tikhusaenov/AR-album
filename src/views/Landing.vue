@@ -1,13 +1,12 @@
 <template>
-  <div class="webarpage">
-    <router-view/>
+  <div>
+    Landing
   </div>
 </template>
 
 <script>
-
     export default {
-        name: "WebArPageLayout"
+        name: "Landing"
     }
 </script>
 

@@ -1,13 +1,15 @@
 <template>
-    
+  <div class="landing">
+    <router-view/>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "LandingLayout"
-    }
+  export default {
+    name: "LandingLayout"
+  }
 </script>
 
-<style scoped>
+<style>
 
 </style>
