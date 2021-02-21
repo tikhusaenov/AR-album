@@ -1,17 +1,62 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body>
+    <title> Multi Markers AR - Playing the Archive - CASA UCL</title>
+    <meta name="description" content="Multi Markers AR - Playing the Archive - CASA UCL">
+	 <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+	 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
 
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
-</html>
+<!--	  <script src="js/multiMarkersName.js"></script>-->
+      <script src="js/barcodeMarkers.js"></script>
+	</head>
+	<body>
+
+    <div  style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+        <button id="nextBtn">
+            NEXT IMAGE
+        </button>
+    </div>
+
+    <div  style='position: fixed; top: 30px; width:100%; text-align: center; z-index: 1;'>
+        <button id ="prevBtn">
+            PREVIOUS IMAGE
+        </button>
+    </div>
+
+	<a-scene markers_start vr-mode-ui="enabled: false" color-space="sRGB" renderer="gammaOutput: true"
+  embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+
+    	<a-entity id='userCamera' camera>
+		    <a-cursor> </a-cursor>
+    	</a-entity>
+	</a-scene>
+
+    <script>
+
+
+
+
+
+
+
+        // nextNtn.getElementById("#nextBtn").addEventListener("click", (e)=> {
+        //     console.log("next");
+        //     document.getElementById("nextBtn")
+        //     if(currentMarkerId != -1){
+        //         document.getElementById(currentMarkerId+"_img").setAttribute('src',images[currentMarkerId -1][currentImgIndex +1].img);
+        //     }
+        //
+        // })
+        //
+        // document.getElementById("#prevBtn").addEventListener("click", (e)=> {
+        //     // do stuff here.
+        //     console.log("prev");
+        //     if(currentMarkerId != -1){
+        //         document.getElementById(currentMarkerId+"_img").setAttribute('src',images[currentMarkerId -1][currentImgIndex -1].img);
+        //     }
+        // })
+    </script>
+
+
+	</body>
+	</html>
